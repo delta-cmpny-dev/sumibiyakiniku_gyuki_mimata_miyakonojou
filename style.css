@@ -105,12 +105,80 @@ a {
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .hero {
+    min-height: max(520px, calc(100svh - 128px));
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: max(480px, calc(100svh - 184px));
+  }
+}
+
+.hero__slides {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+.hero__slide.is-active {
+  opacity: 1;
+}
+
 .hero__bg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero__dots {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 84px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__dot {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.hero__dot::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: rgba(237, 230, 219, 0.45);
+  transition: background 0.4s ease, width 0.4s ease;
+}
+
+.hero__dot.is-active::before {
+  width: 34px;
+  background: var(--gold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__slide {
+    transition: none;
+  }
 }
 
 .hero__overlay {
@@ -382,6 +450,48 @@ a {
 
   .band__split-text .room-list {
     justify-content: flex-start;
+  }
+}
+
+.band__split--framed .band__split-photo {
+  width: calc(100% - 40px);
+  max-width: 480px;
+  margin: 36px auto 0;
+  padding: 10px;
+  background: var(--bg);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55);
+}
+
+.band__split--framed .band__split-photo img {
+  height: 44vh;
+  min-height: 260px;
+  box-shadow: 0 0 0 1px var(--gold);
+}
+
+@media (min-width: 768px) {
+  .band__split--framed {
+    align-items: center;
+    justify-content: center;
+    gap: clamp(32px, 5vw, 72px);
+    padding: clamp(48px, 6vw, 80px) clamp(24px, 5vw, 56px);
+  }
+
+  .band__split--framed .band__split-photo {
+    width: 44%;
+    max-width: 480px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .band__split--framed .band__split-photo img {
+    height: 420px;
+    min-height: 0;
+  }
+
+  .band__split--framed .band__split-text {
+    width: auto;
+    flex: 0 1 460px;
+    padding: 0;
   }
 }
 

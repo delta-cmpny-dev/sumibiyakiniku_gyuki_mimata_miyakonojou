@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261010a">
+<link rel="stylesheet" href="style.css?v=20261010d">
 </head>
 <body>
 
@@ -28,7 +28,23 @@
 </div>
 
 <header class="hero">
-  <img class="hero__bg" src="assets/img/hero-moriawase.webp?v=20260925a" alt="牛輝の焼肉盛り合わせ（上カルビ・赤身・ハラミ・塩タン）">
+  <div class="hero__slides">
+    <div class="hero__slide is-active">
+      <img class="hero__bg" src="assets/img/hero-moriawase.webp?v=20260925a" alt="牛輝の焼肉盛り合わせ（上カルビ・赤身・ハラミ・塩タン）">
+    </div>
+    <div class="hero__slide">
+      <img class="hero__bg" src="assets/img/interior-counter.webp?v=20261010a" alt="炭火焼肉 牛輝の店内（カウンター席）" decoding="async">
+    </div>
+    <div class="hero__slide">
+      <img class="hero__bg" src="assets/img/concept-meat.webp?v=20261010a" alt="上ハラミと特上タンの盛り合わせ" decoding="async">
+    </div>
+    <div class="hero__slide">
+      <picture>
+        <source media="(max-width: 767px)" srcset="assets/img/hero-rooms-tall.webp?v=20261010b">
+        <img class="hero__bg" src="assets/img/hero-rooms-wide.webp?v=20261010c" alt="牛輝の木製看板と、個室の座敷・テーブル席" decoding="async">
+      </picture>
+    </div>
+  </div>
   <div class="hero__overlay"></div>
 
   <div class="hero__vertical-group">
@@ -49,7 +65,7 @@
 <main>
 
   <section class="band band--dark" id="concept">
-    <div class="band__split">
+    <div class="band__split band__split--framed">
       <figure class="band__split-photo reveal">
         <img src="assets/img/concept-meat.webp?v=20261010a" alt="上ハラミと特上タンの盛り合わせ" loading="lazy">
       </figure>
@@ -470,6 +486,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20261009a"></script>
+<script src="script.js?v=20261010b"></script>
 </body>
 </html>
