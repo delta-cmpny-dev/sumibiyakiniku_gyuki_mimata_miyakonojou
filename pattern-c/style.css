@@ -386,12 +386,13 @@ a {
 
   .editorial__num {
     grid-column: 1;
-    grid-row: 1 / span 2;
+    grid-row: 1;
     align-self: start;
   }
 
   .editorial__media {
     grid-column: 2;
+    grid-row: 1;
     margin: 0;
   }
 
@@ -402,6 +403,7 @@ a {
 
   .editorial__text {
     grid-column: 3;
+    grid-row: 1;
   }
 
   .editorial--reverse .editorial__num {
@@ -415,6 +417,25 @@ a {
   .editorial--reverse .editorial__text {
     grid-column: 2;
   }
+}
+
+.editorial__media {
+  position: relative;
+}
+
+.photo-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 4px 14px;
+  font-family: var(--font-jp);
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  line-height: 1.7;
+  color: #fff;
+  background: rgba(18, 18, 18, 0.75);
 }
 
 /* ---------- Menu ---------- */

@@ -426,6 +426,26 @@ a {
   color: var(--text-on-dark);
 }
 
+.band__split-photo {
+  position: relative;
+}
+
+.photo-caption {
+  position: absolute;
+  left: 22px;
+  bottom: 12px;
+  margin: 0;
+  padding: 3px 12px;
+  font-family: var(--font-round);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+  color: #fff;
+  background: rgba(58, 38, 20, 0.7);
+  border-radius: 999px;
+}
+
 /* ---------- Menu ---------- */
 
 .menu-grid {
