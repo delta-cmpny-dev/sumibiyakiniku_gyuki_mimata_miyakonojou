@@ -614,6 +614,29 @@ a {
   }
 }
 
+#sns {
+  overflow: hidden;
+}
+
+#sns .section-inner {
+  position: relative;
+  z-index: 0;
+}
+
+#sns .section-inner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: clamp(16px, 4vw, 48px);
+  left: 50%;
+  width: clamp(240px, 54vw, 440px);
+  aspect-ratio: 1 / 1;
+  transform: translateX(-50%);
+  background: url("assets/img/instagram-glyph.svg") center / contain no-repeat;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
 /* ---------- Menu ---------- */
 
 .menu-grid {
