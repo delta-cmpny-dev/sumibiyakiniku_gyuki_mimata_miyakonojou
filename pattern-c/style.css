@@ -951,3 +951,191 @@ a {
     max-height: 72vh;
   }
 }
+
+/* ---------- Synced with pattern A (2026-10-11) ---------- */
+
+.hero__slides {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.hero__slide.is-active {
+  opacity: 1;
+}
+
+.hero__dots {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__dot {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.hero__dot::before {
+  content: "";
+  width: 26px;
+  height: 3px;
+  transition: background 0.4s ease, width 0.4s ease;
+}
+
+.hero__dot.is-active::before {
+  width: 34px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__slide {
+    transition: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: max(520px, calc(100svh - 128px));
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: max(480px, calc(100svh - 184px));
+  }
+}
+
+.price-note {
+  display: block;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
+.room-gallery {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: clamp(40px, 7vw, 64px) clamp(24px, 6vw, 48px) clamp(48px, 9vw, 96px);
+  text-align: center;
+}
+
+.room-gallery__label {
+  margin: 0 0 28px;
+  font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+  letter-spacing: 0.1em;
+}
+
+.room-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.room-gallery__item {
+  margin: 0;
+}
+
+.room-gallery__item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.room-gallery__item:last-child {
+  grid-column: 1 / -1;
+}
+
+.room-gallery__item:last-child img {
+  aspect-ratio: 2 / 1;
+}
+
+@media (min-width: 640px) {
+  .room-gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .room-gallery__item:last-child {
+    grid-column: auto;
+  }
+
+  .room-gallery__item:last-child img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.map {
+  margin-bottom: 24px;
+}
+
+.map-open {
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.btn--map {
+  gap: 10px;
+}
+
+.btn__icon {
+  line-height: 1;
+}
+
+#sns {
+  overflow: hidden;
+}
+
+#sns .section-inner {
+  position: relative;
+  z-index: 0;
+}
+
+#sns .section-inner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: clamp(16px, 4vw, 48px);
+  left: 50%;
+  width: clamp(240px, 54vw, 440px);
+  aspect-ratio: 1 / 1;
+  transform: translateX(-50%);
+  background: url("../assets/img/instagram-glyph.svg") center / contain no-repeat;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.hero__dots {
+  bottom: 84px;
+}
+
+.hero__dot::before {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.hero__dot.is-active::before {
+  background: var(--white);
+}
+
+.room-gallery__label {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.room-gallery__item img {
+  filter: grayscale(35%);
+}
