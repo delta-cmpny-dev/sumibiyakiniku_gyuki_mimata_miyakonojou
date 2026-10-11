@@ -25,7 +25,7 @@
 
   var hero = slides[0].closest('.hero');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var INTERVAL = 4500;
+  var INTERVAL = 3000;
   var current = 0;
   var timer = null;
 

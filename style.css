@@ -126,7 +126,7 @@ a {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 0.7s ease;
 }
 
 .hero__slide.is-active {
@@ -1055,7 +1055,7 @@ a {
 }
 
 .map {
-  margin: 0 auto 40px;
+  margin: 0 auto 24px;
   max-width: 640px;
 }
 
@@ -1064,6 +1064,23 @@ a {
   height: 320px;
   border: 0;
   filter: grayscale(25%);
+}
+
+.map-open {
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.btn--map {
+  gap: 10px;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.btn__icon {
+  font-family: var(--font-label);
+  line-height: 1;
 }
 
 /* ---------- Celebrity gallery ---------- */
