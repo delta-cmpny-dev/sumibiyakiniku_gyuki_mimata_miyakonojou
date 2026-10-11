@@ -863,6 +863,13 @@ a {
   border-top: 1px solid rgba(28, 28, 24, 0.1);
 }
 
+.price-note {
+  display: block;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
 .price-list__cat--wide {
   grid-column: 1 / -1;
 }
