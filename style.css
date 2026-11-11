@@ -870,6 +870,11 @@ a {
   opacity: 0.75;
 }
 
+/* 言葉の途中で折り返さない（<wbr> の所だけで折り返す） */
+.keep-words {
+  white-space: nowrap;
+}
+
 .price-list__cat--wide {
   grid-column: 1 / -1;
 }
