@@ -1676,6 +1676,38 @@ html {
   }
 }
 
+/* 上の帯：定休日の横に Instagram のアイコン */
+.top-bar__side {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.top-bar__insta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 0 0 10px;
+  margin-left: 6px;
+  border-left: 1px solid rgba(237, 230, 219, 0.25);
+  color: var(--text-on-dark);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.top-bar__insta-label {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: clamp(0.72rem, 3vw, 0.85rem);
+  letter-spacing: 0.04em;
+}
+
+.top-bar__insta:hover,
+.top-bar__insta:focus-visible {
+  color: var(--gold);
+}
+
 /* 流れる写真の上下の箱 */
 .section-inner--before-marquee {
   padding-bottom: 0;
