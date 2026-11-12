@@ -67,3 +67,20 @@
   show(0);
   restart();
 })();
+
+(function () {
+  var bar = document.querySelector('.top-bar');
+  if (!bar) return;
+  function setBarHeight() {
+    document.documentElement.style.setProperty('--top-bar-h', bar.offsetHeight + 'px');
+  }
+  setBarHeight();
+  window.addEventListener('resize', setBarHeight);
+
+  // 別のページから「#lunch」などで来た時、帯の高さが分かってから、もう一度その見出しへ合わせる
+  window.addEventListener('load', function () {
+    setBarHeight();
+    var target = location.hash && document.getElementById(location.hash.slice(1));
+    if (target) target.scrollIntoView();
+  });
+})();

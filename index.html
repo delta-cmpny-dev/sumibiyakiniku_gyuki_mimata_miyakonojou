@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261111a">
+<link rel="stylesheet" href="style.css?v=20261112c">
 </head>
 <body>
 
@@ -19,9 +19,9 @@
   </div>
   <nav class="top-bar__nav">
     <a href="#concept">こだわり</a>
-    <a href="#menu">メニュー</a>
-    <a href="#takeout">テイクアウト</a>
-    <a href="#room">個室</a>
+    <a href="menu.html">メニュー</a>
+    <a href="takeout.html">テイクアウト</a>
+    <a href="room.html">個室</a>
     <a href="#sns">SNS</a>
     <a href="#info">アクセス</a>
   </nav>
@@ -76,346 +76,75 @@
           脂の少ない赤身肉を中心に、備長炭でじっくり焼き上げています。<br>
           ランプ、イチボ、シンシンなど、希少な部位は専用のわさびでどうぞ。
         </p>
-        <a class="ghost-link reveal" href="#menu">MENU<span class="ghost-link__arrow">→</span></a>
+        <a class="ghost-link reveal" href="menu.html">MENU<span class="ghost-link__arrow">→</span></a>
       </div>
+    </div>
+  </section>
+
+  <section class="band band--sub" id="scene">
+    <div class="section-inner section-inner--wide">
+      <p class="eyebrow eyebrow--dark reveal">SCENE</p>
+      <h2 class="section__title section__title--dark reveal">どんな時に使いますか</h2>
+      <ul class="scene-list">
+        <li class="reveal">
+          <a class="scene-card" href="menu.html">
+            <img class="scene-card__img" src="assets/img/hero-moriawase.webp?v=20260925a" alt="" loading="lazy">
+            <span class="scene-card__body">
+              <span class="scene-card__head"><span class="scene-card__title">夜の焼肉</span><span class="scene-card__arrow" aria-hidden="true">↗</span></span>
+              <span class="scene-card__meta">18:00〜22:00</span>
+              <span class="scene-card__desc">牛タン・<wbr>ハラミ・<wbr>ホルモン・<wbr>馬刺し</span>
+            </span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="scene-card" href="menu.html#lunch">
+            <img class="scene-card__img" src="assets/img/dish-reimen.webp?v=20260925a" alt="" loading="lazy">
+            <span class="scene-card__body">
+              <span class="scene-card__head"><span class="scene-card__title">ランチ</span><span class="scene-card__arrow" aria-hidden="true">↗</span></span>
+              <span class="scene-card__meta">11:30〜14:30</span>
+              <span class="scene-card__desc">丼・<wbr>ビビンバ・<wbr>冷麺・<wbr>焼肉セット</span>
+            </span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="scene-card" href="takeout.html">
+            <img class="scene-card__img" src="assets/img/takeout-tandon.webp?v=20260925a" alt="" loading="lazy">
+            <span class="scene-card__body">
+              <span class="scene-card__head"><span class="scene-card__title">テイクアウト</span><span class="scene-card__arrow" aria-hidden="true">↗</span></span>
+              <span class="scene-card__meta">お電話で注文</span>
+              <span class="scene-card__desc">丼・<wbr>冷麺・<wbr>おつまみ</span>
+            </span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="scene-card" href="room.html">
+            <img class="scene-card__img" src="assets/img/room-a.webp?v=20261011a" alt="" loading="lazy">
+            <span class="scene-card__body">
+              <span class="scene-card__head"><span class="scene-card__title">個室・宴会</span><span class="scene-card__arrow" aria-hidden="true">↗</span></span>
+              <span class="scene-card__meta">個室あり</span>
+              <span class="scene-card__desc">団体様24〜28名まで</span>
+            </span>
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 
   <section class="band band--light" id="menu">
     <div class="section-inner">
       <p class="eyebrow eyebrow--dark reveal">MENU</p>
-      <h2 class="section__title section__title--dark reveal">メニュー　一部紹介</h2>
-      <p class="section__lead reveal">人気のメニューを一部ご紹介します。<br>全メニューは下の「料金表」をご覧ください。</p>
-
-      <div class="menu-grid">
-        <article class="menu-item reveal">
-          <img class="menu-item__img" src="assets/img/cut-atsugiri-tan.webp?v=20261111a" alt="特上厚切りたん" loading="lazy">
-          <h3 class="menu-item__name">特上厚切りたん</h3>
-          <p class="menu-item__desc">タン元のみを贅沢に使用。</p>
-          <p class="menu-item__price">2,180円</p>
-        </article>
-
-        <article class="menu-item reveal">
-          <img class="menu-item__img" src="assets/img/cut-harami.webp?v=20261111a" alt="特選ハラミ・サガリ" loading="lazy">
-          <h3 class="menu-item__name">特選ハラミ・サガリ</h3>
-          <p class="menu-item__desc">和牛のハラミ、サガリです。限定です。</p>
-          <p class="menu-item__price">1,980円</p>
-        </article>
-
-        <article class="menu-item reveal">
-          <img class="menu-item__img" src="assets/img/cut-nama-tan.webp?v=20260925a" alt="特製ねぎ塩牛たん" loading="lazy">
-          <h3 class="menu-item__name">特製ねぎ塩牛たん</h3>
-          <p class="menu-item__desc">ねぎ塩と共にいただくタンです。</p>
-          <p class="menu-item__price">1,580円</p>
-        </article>
-
-        <article class="menu-item reveal">
-          <img class="menu-item__img" src="assets/img/cut-ichibo.webp?v=20260925a" alt="上赤身" loading="lazy">
-          <h3 class="menu-item__name">上赤身</h3>
-          <p class="menu-item__desc">ランプ、イチボ等の上質な赤身肉を使用。</p>
-          <p class="menu-item__price">1,480円</p>
-        </article>
-
-        <article class="menu-item reveal">
-          <img class="menu-item__img" src="assets/img/dish-nigiri.webp?v=20261111a" alt="宮崎牛特上握り" loading="lazy">
-          <h3 class="menu-item__name">宮崎牛特上握り（一貫）</h3>
-          <p class="menu-item__desc">サシの入った部位で、とろけるような食感を。</p>
-          <p class="menu-item__price">450円</p>
-        </article>
-
-        <article class="menu-item reveal">
-          <img class="menu-item__img" src="assets/img/dish-reimen.webp?v=20260925a" alt="牛輝冷麺" loading="lazy">
-          <h3 class="menu-item__name">牛輝冷麺</h3>
-          <p class="menu-item__desc">キムチ等が入った定番の冷麺です。</p>
-          <p class="menu-item__price">1,000円</p>
-        </article>
-      </div>
-
-      <div class="price-list reveal">
-        <p class="eyebrow eyebrow--dark">ALL MENU</p>
-        <h3 class="price-list__title">料金表</h3>
-
-        <h4 class="price-list__group">メニュー</h4>
-        <div class="price-list__grid">
-          <div class="price-list__cat">
-            <h4>牛肉</h4>
-            <ul>
-              <li><span>特選ハラミ・サガリ<small class="price-note">（限定）</small></span><span>1,980円</span></li>
-              <li><span>特選カルビ</span><span>1,800円</span></li>
-              <li><span>特上焼きすき（5〜6枚）</span><span>1,680円</span></li>
-              <li><span>牛ハラミ</span><span>1,480円</span></li>
-              <li><span>宮崎牛カルビ</span><span>1,480円</span></li>
-              <li><span>上赤身<small class="price-note">（ランプ・イチボ等）</small></span><span>1,480円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>牛タン</h4>
-            <ul>
-              <li><span>特上厚切りたん</span><span>2,180円</span></li>
-              <li><span>特製ねぎ塩牛たん</span><span>1,580円</span></li>
-              <li><span>月見上タン</span><span>1,580円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>ホルモン</h4>
-            <ul>
-              <li><span>牛塩レバー</span><span>780円</span></li>
-              <li><span>タレホルモン</span><span>780円</span></li>
-              <li><span>タレ丸腸</span><span>780円</span></li>
-              <li><span>塩ホルモン</span><span>720円</span></li>
-              <li><span>牛ミノ</span><span>680円</span></li>
-              <li><span>牛ハツ</span><span>680円</span></li>
-              <li><span>コリコリ<small class="price-note">（牛の大動脈）</small></span><span>580円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>鶏肉・豚肉</h4>
-            <ul>
-              <li><span>国産豚バラ</span><span>700円</span></li>
-              <li><span>豚トロ</span><span>700円</span></li>
-              <li><span>鳥えんがわ（味付き）</span><span>650円</span></li>
-              <li><span>鳥小肉（セセリ）</span><span>600円</span></li>
-              <li><span>鳥ハツ</span><span>600円</span></li>
-              <li><span>若鶏もも肉</span><span>550円</span></li>
-              <li><span>大ウインナー（3本）</span><span>400円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>刺身・握り</h4>
-            <ul>
-              <li><span>中トロ馬刺し<small class="price-note">（数量限定）</small></span><span>1,680円</span></li>
-              <li><span>炙り和牛ユッケ</span><span>1,380円</span></li>
-              <li><span>赤身馬刺し<small class="price-note">（熊本から取り寄せ）</small></span><span>1,080円</span></li>
-              <li><span>白センマイ刺し<small class="price-note">（数量限定）</small></span><span>980円</span></li>
-              <li><span>宮崎牛特上握り（一貫）</span><span>450円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>海鮮</h4>
-            <ul>
-              <li><span>かにみそ甲羅焼き（1個）</span><span>800円</span></li>
-              <li><span>サザエ（2個）</span><span>680円</span></li>
-              <li><span>ホタテ（2枚）</span><span>680円</span></li>
-              <li><span>エビ（2尾）</span><span>600円</span></li>
-              <li><span>甲イカ（4匹）</span><span>480円</span></li>
-              <li><span>ガーリックバターソース</span><span>200円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>薬味</h4>
-            <ul>
-              <li><span>肉専用ワサビ</span><span>120円</span></li>
-              <li><span>特製ネギ塩</span><span>120円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>ご飯もの</h4>
-            <ul>
-              <li><span>チーズ石焼ビビンバ</span><span>1,180円</span></li>
-              <li><span>納豆ビビンバ</span><span>1,180円</span></li>
-              <li><span>石焼ビビンバ</span><span>1,080円</span></li>
-              <li><span>白ご飯（大）</span><span>400円</span></li>
-              <li><span>白ご飯（中）</span><span>300円</span></li>
-              <li><span>白ご飯（小）</span><span>200円</span></li>
-              <li><span>おにぎり1個（塩・たまご）</span><span>150円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>お子様メニュー</h4>
-            <ul>
-              <li><span>お子様カレー</span><span>300円</span></li>
-              <li><span>お子様ミニハンバーグ</span><span>300円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>サラダ・焼き野菜</h4>
-            <ul>
-              <li><span>野菜盛り合わせ<small class="price-note keep-words">（キャベツ・<wbr>玉ねぎ・<wbr>ピーマン・<wbr>エリンギ）</small></span><span>900円</span></li>
-              <li><span>チョレギサラダ（大）<small class="price-note">（3〜4人前）</small></span><span>750円</span></li>
-              <li><span>チョレギサラダ（小）<small class="price-note">（2〜3人前）</small></span><span>450円</span></li>
-              <li><span>コーンバター</span><span>500円</span></li>
-              <li><span>にんにくホイル焼き</span><span>450円</span></li>
-              <li><span>丸ごとピーマン</span><span>350円</span></li>
-              <li><span>キャベツ</span><span>300円</span></li>
-              <li><span>玉ねぎ</span><span>300円</span></li>
-              <li><span>エリンギ</span><span>300円</span></li>
-              <li><span>サニーレタス</span><span>300円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>一品物</h4>
-            <ul>
-              <li><span>白菜キムチ</span><span>480円</span></li>
-              <li><span>長芋キムチ</span><span>480円</span></li>
-              <li><span>タラチャンジャ</span><span>420円</span></li>
-              <li><span>もやしナムル</span><span>400円</span></li>
-              <li><span>枝豆</span><span>380円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>麺類・スープ</h4>
-            <ul>
-              <li><span>梅じそ冷麺</span><span>1,050円</span></li>
-              <li><span>かぼす冷麺<small class="price-note">（かぼす入荷時のみ）</small></span><span>1,050円</span></li>
-              <li><span>牛輝冷麺</span><span>1,000円</span></li>
-              <li><span>玉子スープ<small class="price-note">（2〜3人前）</small></span><span>400円</span></li>
-              <li><span>ワカメスープ<small class="price-note">（2〜3人前）</small></span><span>350円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>デザート</h4>
-            <ul>
-              <li><span>日向夏シャーベット</span><span>400円</span></li>
-              <li><span>マンゴーシャーベット</span><span>400円</span></li>
-              <li><span>りんごシャーベット</span><span>400円</span></li>
-              <li><span>バニラアイス</span><span>300円</span></li>
-              <li><span>チョコアイス</span><span>300円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat price-list__cat--wide">
-            <h4>和牛もつ鍋コース</h4>
-            <p class="price-list__course-price">2,500円（一人前）／4,000円（飲み放題付）</p>
-            <p class="price-list__course-desc">全6品：炭火焼き鶏のタタキ・鶏えんがわ焼き・枝豆・牛輝特製もつ鍋・おにぎり・〆のちゃんぽん麺</p>
-            <p class="price-list__sub-label">追加メニュー</p>
-            <ul>
-              <li><span>和牛ホルモン</span><span>800円</span></li>
-              <li><span>追加野菜盛り（ニラ・ごぼう・きゃべつ・もやし）</span><span>700円</span></li>
-              <li><span>若鶏肉</span><span>600円</span></li>
-              <li><span>ウインナー</span><span>400円</span></li>
-              <li><span>豆腐</span><span>150円</span></li>
-            </ul>
-          </div>
+      <h2 class="section__title section__title--dark reveal">メニュー</h2>
+      <div class="feature">
+        <figure class="feature__photo reveal">
+          <img src="assets/img/cut-akami.webp?v=20261112a" alt="上赤身" loading="lazy">
+        </figure>
+        <div class="feature__body reveal">
+          <p class="feature__tag">注目の一品</p>
+          <h3 class="feature__name">上赤身</h3>
+          <p class="feature__desc">ランプ、イチボ等の上質な赤身肉を使用。</p>
+          <p class="feature__price">1,480円</p>
+          <a class="ghost-link ghost-link--dark" href="menu.html">メニューの詳細はこちら<span class="ghost-link__arrow">→</span></a>
         </div>
-
-        <h4 class="price-list__group price-list__group--split"><span>ドリンク</span></h4>
-        <div class="price-list__grid">
-          <div class="price-list__cat">
-            <h4>ビール</h4>
-            <ul>
-              <li><span>瓶ビール<small class="price-note">（アサヒ生ビール マルエフ）</small></span><span>730円</span></li>
-              <li><span>瓶ビール<small class="price-note">（サッポロ赤星）</small></span><span>730円</span></li>
-              <li><span>生ビール<small class="price-note">（アサヒスーパードライ）</small></span><span>630円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>ハイボール</h4>
-            <ul>
-              <li><span>メガハイボール</span><span>880円</span></li>
-              <li><span>梅酒ハイボール</span><span>580円</span></li>
-              <li><span>コークハイボール</span><span>550円</span></li>
-              <li><span>ジンジャーハイボール</span><span>550円</span></li>
-              <li><span>ハイボール</span><span>500円</span></li>
-              <li><span>マルスハイボール</span><span>480円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>サワー</h4>
-            <ul>
-              <li><span>レモン</span><span>500円</span></li>
-              <li><span>林檎</span><span>500円</span></li>
-              <li><span>グレープフルーツ</span><span>500円</span></li>
-              <li><span>桃</span><span>500円</span></li>
-              <li><span>よだれ梅</span><span>500円</span></li>
-              <li><span>よだれレモン</span><span>500円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>焼酎</h4>
-            <p class="price-list__course-desc keep-words">霧島（宮崎限定）・<wbr>黒霧島・<wbr>木挽ブルー</p>
-            <ul>
-              <li><span>五合瓶<small class="price-note">（キープできます）</small></span><span>1,800円</span></li>
-              <li><span>一合</span><span>450円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>ワイン</h4>
-            <ul>
-              <li><span>ボトルワイン（赤・白）<small class="price-note keep-words">赤：カベルネ・ソーヴィニヨン、<wbr>ピノ・ノワール<br>白：シャルドネ</small></span><span>4,200円</span></li>
-              <li><span>グラスワイン（赤・白）</span><span>550円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>日本酒</h4>
-            <ul>
-              <li><span>賀茂鶴 本醸造（300ml）</span><span>1,180円</span></li>
-              <li><span>山田錦 純米酒（300ml）</span><span>1,180円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>梅酒</h4>
-            <ul>
-              <li><span>濃醇梅酒<small class="price-note">（ロック・ソーダ）</small></span><span>600円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>ノンアルコール</h4>
-            <ul>
-              <li><span>アサヒゼロ<small class="price-note">（アルコール分0.00%）</small></span><span>480円</span></li>
-              <li><span>カシスオレンジテイスト</span><span>420円</span></li>
-              <li><span>シャルドネテイスト</span><span>420円</span></li>
-              <li><span>レモンサワーテイスト</span><span>420円</span></li>
-              <li><span>ノンアルコール梅酒<small class="price-note">（ロック・ソーダ）</small></span><span>420円</span></li>
-            </ul>
-          </div>
-
-          <div class="price-list__cat">
-            <h4>ソフトドリンク</h4>
-            <ul>
-              <li><span>ウーロン茶</span><span>380円</span></li>
-              <li><span>オレンジ100%</span><span>380円</span></li>
-              <li><span>アップル100%</span><span>380円</span></li>
-              <li><span>コーラ</span><span>380円</span></li>
-              <li><span>メロンソーダ</span><span>380円</span></li>
-              <li><span>ジンジャーエール</span><span>380円</span></li>
-              <li><span>レモンスカッシュ</span><span>380円</span></li>
-              <li><span>白ぶどう</span><span>380円</span></li>
-              <li><span>レモネード</span><span>380円</span></li>
-              <li><span>ホワイトウォーター</span><span>380円</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <h4 class="price-list__group price-list__group--split">
-          <span class="price-list__group-spacer" aria-hidden="true">（11:30〜14:30）</span>
-          <span>ランチメニュー</span>
-          <span class="price-list__group-time">（11:30〜14:30）</span>
-        </h4>
-        <div class="price-list__grid price-list__grid--lunch">
-          <div class="price-list__cat price-list__cat--wide">
-            <ul>
-              <li><span>選べる焼肉セット（平日）</span><span>1,980円</span></li>
-              <li><span>炭焼ネギ塩牛タン丼セット</span><span>1,480円</span></li>
-              <li><span>炭焼牛ハラミ丼セット</span><span>1,380円</span></li>
-              <li><span>チーズ石焼ビビンバ（スープ付）</span><span>1,080円</span></li>
-              <li><span>納豆ビビンバ（スープ付）</span><span>980円</span></li>
-              <li><span>石焼ビビンバ（スープ付）</span><span>950円</span></li>
-              <li><span>梅じそ冷麺</span><span>950円</span></li>
-              <li><span>牛輝冷麺</span><span>900円</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="menu-note">価格はすべて税込です。仕入れ状況により内容が変わる場合があります。</p>
       </div>
     </div>
   </section>
@@ -424,48 +153,18 @@
     <div class="section-inner">
       <p class="eyebrow reveal">TAKEOUT</p>
       <h2 class="section__title reveal">テイクアウト</h2>
-      <p class="section__lead reveal">お弁当感覚で、牛輝の味をご自宅でも。</p>
-
-      <div class="menu-grid menu-grid--takeout">
-        <article class="menu-item menu-item--dark reveal">
-          <img class="menu-item__img" src="assets/img/takeout-tandon.webp?v=20260925a" alt="炭火焼きネギ塩牛タン丼" loading="lazy">
-          <h3 class="menu-item__name">炭火焼きネギ塩牛タン丼</h3>
-          <p class="menu-item__price">900円</p>
-        </article>
-
-        <article class="menu-item menu-item--dark reveal">
-          <img class="menu-item__img" src="assets/img/takeout-bibimba.webp?v=20260925a" alt="宮崎牛ミンチのビビンバ丼" loading="lazy">
-          <h3 class="menu-item__name">宮崎牛ミンチのビビンバ丼</h3>
-          <p class="menu-item__price">850円</p>
-        </article>
-
-        <article class="menu-item menu-item--dark reveal">
-          <img class="menu-item__img" src="assets/img/takeout-reimen.webp?v=20260925a" alt="牛輝冷麺（テイクアウト）" loading="lazy">
-          <h3 class="menu-item__name">牛輝冷麺</h3>
-          <p class="menu-item__price">850円</p>
-        </article>
-
-        <article class="menu-item menu-item--dark reveal">
-          <img class="menu-item__img" src="assets/img/takeout-engawa.webp?v=20260925a" alt="おつまみ鶏えんがわ" loading="lazy">
-          <h3 class="menu-item__name">おつまみ鶏えんがわ</h3>
-          <p class="menu-item__price">550円</p>
-        </article>
+      <div class="feature feature--dark">
+        <figure class="feature__photo reveal">
+          <img src="assets/img/takeout-tandon.webp?v=20260925a" alt="炭火焼きネギ塩牛タン丼" loading="lazy">
+        </figure>
+        <div class="feature__body reveal">
+          <p class="feature__tag">注目の一品</p>
+          <h3 class="feature__name">炭火焼きネギ塩牛タン丼</h3>
+          <p class="feature__desc">お弁当感覚で、牛輝の味をご自宅でも。お電話でご注文ください。</p>
+          <p class="feature__price">900円</p>
+          <a class="ghost-link" href="takeout.html">テイクアウトの詳細はこちら<span class="ghost-link__arrow">→</span></a>
+        </div>
       </div>
-
-      <ul class="takeout-extra reveal">
-        <li><span>炭火焼きネギ塩牛タン丼</span><span>900円</span></li>
-        <li><span>炭火焼きタレハラミ丼</span><span>900円</span></li>
-        <li><span>宮崎牛ミンチのビビンバ丼</span><span>850円</span></li>
-        <li><span>牛輝冷麺</span><span>850円</span></li>
-        <li><span>おつまみネギ塩牛タン</span><span>800円</span></li>
-        <li><span>おつまみ鶏えんがわ</span><span>550円</span></li>
-        <li><span>もつ鍋用　和牛ホルモンと自家製スープセット（一人前）</span><span>900円</span></li>
-      </ul>
-
-      <p class="menu-note menu-note--dark reveal">
-        価格は税込・容器代込みです。お電話でご注文ください。<br>
-        ビビンバ丼はご飯大盛り・温泉卵・チーズトッピングを各100円で追加できます。もつ鍋セットは二人前〜のご注文となります。
-      </p>
     </div>
   </section>
 
@@ -496,24 +195,10 @@
             <span class="room-list__label">団体様まで対応</span>
           </li>
         </ul>
-        <a class="ghost-link ghost-link--dark reveal" href="#sns">SNS<span class="ghost-link__arrow">→</span></a>
+        <a class="ghost-link ghost-link--dark reveal" href="room.html">個室の詳細はこちら<span class="ghost-link__arrow">→</span></a>
       </div>
     </div>
 
-    <div class="room-gallery">
-      <p class="room-gallery__label reveal">個室の様子</p>
-      <div class="room-gallery__grid">
-        <figure class="room-gallery__item reveal">
-          <img src="assets/img/room-a.webp?v=20261011a" alt="個室：板張りの壁と無煙ロースターのあるテーブル席" loading="lazy">
-        </figure>
-        <figure class="room-gallery__item reveal">
-          <img src="assets/img/room-b.webp?v=20261011a" alt="個室：ゆったりとした座敷の掘りごたつ席" loading="lazy">
-        </figure>
-        <figure class="room-gallery__item reveal">
-          <img src="assets/img/room-c.webp?v=20261011a" alt="個室：墨色の柄の壁に囲まれた座敷席" loading="lazy">
-        </figure>
-      </div>
-    </div>
   </section>
 
   <section class="band band--light" id="sns">
@@ -589,7 +274,6 @@
 
     </div>
   </section>
-
 </main>
 
 <footer class="band band--dark footer">
@@ -599,7 +283,6 @@
     <p class="footer__addr">宮崎県北諸県郡三股町稗田11-1</p>
   </div>
 </footer>
-
-<script src="script.js?v=20261011c"></script>
+<script src="script.js?v=20261112c"></script>
 </body>
 </html>

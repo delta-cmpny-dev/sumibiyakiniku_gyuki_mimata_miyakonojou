@@ -1204,3 +1204,292 @@ a {
     max-height: 72vh;
   }
 }
+
+/* ==========================================================
+   2026-11-12 ページ分け：トップの一覧・注目の一品・別ページ
+   ========================================================== */
+
+/* 上に固定の帯があるので、ページ内の移動先が帯に隠れないようにする */
+html {
+  scroll-padding-top: var(--top-bar-h, 200px);
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: var(--top-bar-h, 140px);
+  }
+}
+
+/* ---------- どんな時に使いますか（一覧） ---------- */
+
+.band--sub {
+  background: var(--bg-sub);
+}
+
+.section-inner--wide {
+  max-width: 1120px;
+}
+
+.scene-list {
+  list-style: none;
+  margin: 36px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  text-align: left;
+}
+
+@media (min-width: 600px) {
+  .scene-list {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .scene-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+.scene-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--white);
+  border: 1px solid rgba(28, 28, 24, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink);
+  box-shadow: 0 4px 16px rgba(28, 28, 24, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.scene-card:hover,
+.scene-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(28, 28, 24, 0.12);
+}
+
+.scene-card__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.scene-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px 16px;
+}
+
+@media (min-width: 600px) {
+  .scene-card__body {
+    gap: 6px;
+    padding: 18px 20px 22px;
+  }
+}
+
+.scene-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.scene-card__title {
+  font-family: var(--font-mincho);
+  font-weight: 600;
+  font-size: clamp(0.98rem, 4vw, 1.15rem);
+  letter-spacing: 0.06em;
+}
+
+.scene-card__arrow {
+  color: var(--accent);
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.scene-card:hover .scene-card__arrow {
+  transform: translate(2px, -2px);
+}
+
+.scene-card__meta {
+  color: var(--accent);
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.scene-card__desc {
+  color: var(--text);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  opacity: 0.8;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- トップの「注目の一品」 ---------- */
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+.feature__photo {
+  margin: 0;
+  width: 100%;
+  max-width: 340px;
+}
+
+.feature__photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.feature__body {
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (min-width: 768px) {
+  .feature {
+    flex-direction: row;
+    justify-content: center;
+    gap: 56px;
+  }
+
+  .feature__photo {
+    flex: 0 0 340px;
+  }
+}
+
+.feature__tag {
+  margin: 0 0 6px;
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+}
+
+.feature__name {
+  margin: 0 0 10px;
+  padding-top: 14px;
+  border-top: 2px solid var(--accent);
+  font-family: var(--font-mincho);
+  font-weight: 600;
+  font-size: clamp(1.3rem, 4.5vw, 1.6rem);
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
+.feature__desc {
+  margin: 0;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+}
+
+.feature__price {
+  margin: 10px 0 18px;
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--accent);
+}
+
+.feature--dark .feature__tag,
+.feature--dark .feature__price {
+  color: var(--gold);
+}
+
+.feature--dark .feature__name {
+  border-top-color: var(--gold);
+  color: var(--text-on-dark);
+}
+
+.feature--dark .feature__desc {
+  color: var(--text-on-dark);
+  opacity: 0.85;
+}
+
+/* 個室：人数の下の「詳細はこちら」との間をあける */
+.band__split-text .room-list + .ghost-link {
+  margin-top: 28px;
+}
+
+/* ---------- 別ページの上の見出し・戻るリンク ---------- */
+
+.subhead {
+  background: var(--ink);
+  color: var(--text-on-dark);
+  text-align: center;
+  padding: 24px 20px 20px;
+}
+
+.subhead__logo {
+  display: inline-block;
+}
+
+.subhead__logo img {
+  height: 56px;
+  width: auto;
+  margin: 0 auto;
+}
+
+
+.band--back .section-inner {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.top-bar__nav a[aria-current="page"] {
+  opacity: 1;
+  color: var(--gold);
+}
+
+/* 料金表は表示の時に28px上へ動くので、そのぶん見出しの上をあけて止める */
+.price-list__group[id] {
+  scroll-margin-top: 36px;
+}
+
+/* メニューのページ：料金表の各欄へ飛ぶボタン */
+.jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 28px 0 0;
+}
+
+.jump-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(140, 46, 30, 0.45);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.jump-links a:hover,
+.jump-links a:focus-visible {
+  background: var(--accent);
+  color: var(--white);
+}
