@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261112c">
+<link rel="stylesheet" href="style.css?v=20261112d">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
     <a href="#concept">こだわり</a>
     <a href="menu.html">メニュー</a>
     <a href="takeout.html">テイクアウト</a>
-    <a href="room.html">個室</a>
+    <a href="#room">個室</a>
     <a href="#sns">SNS</a>
     <a href="#info">アクセス</a>
   </nav>
@@ -81,10 +81,8 @@
     </div>
   </section>
 
-  <section class="band band--sub" id="scene">
-    <div class="section-inner section-inner--wide">
-      <p class="eyebrow eyebrow--dark reveal">SCENE</p>
-      <h2 class="section__title section__title--dark reveal">どんな時に使いますか</h2>
+  <section class="band band--sub" id="scene" aria-label="ご利用の場面">
+    <div class="section-inner section-inner--wide section-inner--scene">
       <ul class="scene-list">
         <li class="reveal">
           <a class="scene-card" href="menu.html">
@@ -117,7 +115,7 @@
           </a>
         </li>
         <li class="reveal">
-          <a class="scene-card" href="room.html">
+          <a class="scene-card" href="#room">
             <img class="scene-card__img" src="assets/img/room-a.webp?v=20261011a" alt="" loading="lazy">
             <span class="scene-card__body">
               <span class="scene-card__head"><span class="scene-card__title">個室・宴会</span><span class="scene-card__arrow" aria-hidden="true">↗</span></span>
@@ -131,40 +129,291 @@
   </section>
 
   <section class="band band--light" id="menu">
-    <div class="section-inner">
+    <div class="section-inner section-inner--before-marquee">
       <p class="eyebrow eyebrow--dark reveal">MENU</p>
       <h2 class="section__title section__title--dark reveal">メニュー</h2>
-      <div class="feature">
-        <figure class="feature__photo reveal">
-          <img src="assets/img/cut-akami.webp?v=20261112a" alt="上赤身" loading="lazy">
-        </figure>
-        <div class="feature__body reveal">
-          <p class="feature__tag">注目の一品</p>
-          <h3 class="feature__name">上赤身</h3>
-          <p class="feature__desc">ランプ、イチボ等の上質な赤身肉を使用。</p>
-          <p class="feature__price">1,480円</p>
-          <a class="ghost-link ghost-link--dark" href="menu.html">メニューの詳細はこちら<span class="ghost-link__arrow">→</span></a>
-        </div>
+    </div>
+      <div class="marquee" style="--marquee-duration: 70s" role="region" aria-label="メニューの写真（自動で流れます）" tabindex="0">
+        <ul class="marquee__track">
+          <li class="dish">
+            <img class="dish__img" src="assets/img/cut-atsugiri-tan.webp?v=20261111a" alt="特上厚切りたん" loading="lazy">
+            <p class="dish__name">特上厚切りたん</p>
+            <p class="dish__price">2,180円</p>
+          </li>
+          <li class="dish">
+            <img class="dish__img" src="assets/img/cut-harami.webp?v=20261111a" alt="特選ハラミ・サガリ" loading="lazy">
+            <p class="dish__name">特選ハラミ・サガリ</p>
+            <p class="dish__price">1,980円</p>
+          </li>
+          <li class="dish">
+            <img class="dish__img" src="assets/img/cut-nama-tan.webp?v=20260925a" alt="特製ねぎ塩牛たん" loading="lazy">
+            <p class="dish__name">特製ねぎ塩牛たん</p>
+            <p class="dish__price">1,580円</p>
+          </li>
+          <li class="dish">
+            <img class="dish__img" src="assets/img/cut-ichibo.webp?v=20260925a" alt="上赤身" loading="lazy">
+            <p class="dish__name">上赤身</p>
+            <p class="dish__price">1,480円</p>
+          </li>
+          <li class="dish">
+            <img class="dish__img" src="assets/img/dish-motsunabe.webp?v=20261112a" alt="和牛もつ鍋コース" loading="lazy">
+            <p class="dish__name">和牛もつ鍋コース</p>
+            <p class="dish__price">2,500円（一人前）</p>
+          </li>
+          <li class="dish">
+            <img class="dish__img" src="assets/img/dish-nigiri.webp?v=20261111a" alt="宮崎牛特上握り（一貫）" loading="lazy">
+            <p class="dish__name">宮崎牛特上握り（一貫）</p>
+            <p class="dish__price">450円</p>
+          </li>
+          <li class="dish">
+            <img class="dish__img" src="assets/img/dish-reimen.webp?v=20260925a" alt="牛輝冷麺" loading="lazy">
+            <p class="dish__name">牛輝冷麺</p>
+            <p class="dish__price">1,000円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-atsugiri-tan.webp?v=20261111a" alt="特上厚切りたん" loading="lazy">
+            <p class="dish__name">特上厚切りたん</p>
+            <p class="dish__price">2,180円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-harami.webp?v=20261111a" alt="特選ハラミ・サガリ" loading="lazy">
+            <p class="dish__name">特選ハラミ・サガリ</p>
+            <p class="dish__price">1,980円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-nama-tan.webp?v=20260925a" alt="特製ねぎ塩牛たん" loading="lazy">
+            <p class="dish__name">特製ねぎ塩牛たん</p>
+            <p class="dish__price">1,580円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-ichibo.webp?v=20260925a" alt="上赤身" loading="lazy">
+            <p class="dish__name">上赤身</p>
+            <p class="dish__price">1,480円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/dish-motsunabe.webp?v=20261112a" alt="和牛もつ鍋コース" loading="lazy">
+            <p class="dish__name">和牛もつ鍋コース</p>
+            <p class="dish__price">2,500円（一人前）</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/dish-nigiri.webp?v=20261111a" alt="宮崎牛特上握り（一貫）" loading="lazy">
+            <p class="dish__name">宮崎牛特上握り（一貫）</p>
+            <p class="dish__price">450円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/dish-reimen.webp?v=20260925a" alt="牛輝冷麺" loading="lazy">
+            <p class="dish__name">牛輝冷麺</p>
+            <p class="dish__price">1,000円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-atsugiri-tan.webp?v=20261111a" alt="特上厚切りたん" loading="lazy">
+            <p class="dish__name">特上厚切りたん</p>
+            <p class="dish__price">2,180円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-harami.webp?v=20261111a" alt="特選ハラミ・サガリ" loading="lazy">
+            <p class="dish__name">特選ハラミ・サガリ</p>
+            <p class="dish__price">1,980円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-nama-tan.webp?v=20260925a" alt="特製ねぎ塩牛たん" loading="lazy">
+            <p class="dish__name">特製ねぎ塩牛たん</p>
+            <p class="dish__price">1,580円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-ichibo.webp?v=20260925a" alt="上赤身" loading="lazy">
+            <p class="dish__name">上赤身</p>
+            <p class="dish__price">1,480円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/dish-motsunabe.webp?v=20261112a" alt="和牛もつ鍋コース" loading="lazy">
+            <p class="dish__name">和牛もつ鍋コース</p>
+            <p class="dish__price">2,500円（一人前）</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/dish-nigiri.webp?v=20261111a" alt="宮崎牛特上握り（一貫）" loading="lazy">
+            <p class="dish__name">宮崎牛特上握り（一貫）</p>
+            <p class="dish__price">450円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/dish-reimen.webp?v=20260925a" alt="牛輝冷麺" loading="lazy">
+            <p class="dish__name">牛輝冷麺</p>
+            <p class="dish__price">1,000円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-atsugiri-tan.webp?v=20261111a" alt="特上厚切りたん" loading="lazy">
+            <p class="dish__name">特上厚切りたん</p>
+            <p class="dish__price">2,180円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-harami.webp?v=20261111a" alt="特選ハラミ・サガリ" loading="lazy">
+            <p class="dish__name">特選ハラミ・サガリ</p>
+            <p class="dish__price">1,980円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-nama-tan.webp?v=20260925a" alt="特製ねぎ塩牛たん" loading="lazy">
+            <p class="dish__name">特製ねぎ塩牛たん</p>
+            <p class="dish__price">1,580円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/cut-ichibo.webp?v=20260925a" alt="上赤身" loading="lazy">
+            <p class="dish__name">上赤身</p>
+            <p class="dish__price">1,480円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/dish-motsunabe.webp?v=20261112a" alt="和牛もつ鍋コース" loading="lazy">
+            <p class="dish__name">和牛もつ鍋コース</p>
+            <p class="dish__price">2,500円（一人前）</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/dish-nigiri.webp?v=20261111a" alt="宮崎牛特上握り（一貫）" loading="lazy">
+            <p class="dish__name">宮崎牛特上握り（一貫）</p>
+            <p class="dish__price">450円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/dish-reimen.webp?v=20260925a" alt="牛輝冷麺" loading="lazy">
+            <p class="dish__name">牛輝冷麺</p>
+            <p class="dish__price">1,000円</p>
+          </li>
+        </ul>
       </div>
+    <div class="after-marquee">
+      <p class="more-wrap reveal"><a class="more-btn" href="menu.html">メニューの詳細はこちら<span class="more-btn__arrow" aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
   <section class="band band--dark" id="takeout">
-    <div class="section-inner">
+    <div class="section-inner section-inner--before-marquee">
       <p class="eyebrow reveal">TAKEOUT</p>
       <h2 class="section__title reveal">テイクアウト</h2>
-      <div class="feature feature--dark">
-        <figure class="feature__photo reveal">
-          <img src="assets/img/takeout-tandon.webp?v=20260925a" alt="炭火焼きネギ塩牛タン丼" loading="lazy">
-        </figure>
-        <div class="feature__body reveal">
-          <p class="feature__tag">注目の一品</p>
-          <h3 class="feature__name">炭火焼きネギ塩牛タン丼</h3>
-          <p class="feature__desc">お弁当感覚で、牛輝の味をご自宅でも。お電話でご注文ください。</p>
-          <p class="feature__price">900円</p>
-          <a class="ghost-link" href="takeout.html">テイクアウトの詳細はこちら<span class="ghost-link__arrow">→</span></a>
-        </div>
+      <p class="section__lead reveal">お弁当感覚で、牛輝の味をご自宅でも。お電話でご注文ください。</p>
+    </div>
+      <div class="marquee" style="--marquee-duration: 60s" role="region" aria-label="テイクアウトの写真（自動で流れます）" tabindex="0">
+        <ul class="marquee__track">
+          <li class="dish">
+            <img class="dish__img" src="assets/img/takeout-tandon.webp?v=20260925a" alt="炭火焼きネギ塩牛タン丼" loading="lazy">
+            <p class="dish__name">炭火焼きネギ塩牛タン丼</p>
+            <p class="dish__price">900円</p>
+          </li>
+          <li class="dish">
+            <img class="dish__img" src="assets/img/takeout-bibimba.webp?v=20260925a" alt="宮崎牛ミンチのビビンバ丼" loading="lazy">
+            <p class="dish__name">宮崎牛ミンチのビビンバ丼</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li class="dish">
+            <img class="dish__img" src="assets/img/takeout-reimen.webp?v=20260925a" alt="牛輝冷麺" loading="lazy">
+            <p class="dish__name">牛輝冷麺</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li class="dish">
+            <img class="dish__img" src="assets/img/takeout-engawa.webp?v=20260925a" alt="おつまみ鶏えんがわ" loading="lazy">
+            <p class="dish__name">おつまみ鶏えんがわ</p>
+            <p class="dish__price">550円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-tandon.webp?v=20260925a" alt="炭火焼きネギ塩牛タン丼" loading="lazy">
+            <p class="dish__name">炭火焼きネギ塩牛タン丼</p>
+            <p class="dish__price">900円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-bibimba.webp?v=20260925a" alt="宮崎牛ミンチのビビンバ丼" loading="lazy">
+            <p class="dish__name">宮崎牛ミンチのビビンバ丼</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-reimen.webp?v=20260925a" alt="牛輝冷麺" loading="lazy">
+            <p class="dish__name">牛輝冷麺</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-engawa.webp?v=20260925a" alt="おつまみ鶏えんがわ" loading="lazy">
+            <p class="dish__name">おつまみ鶏えんがわ</p>
+            <p class="dish__price">550円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-tandon.webp?v=20260925a" alt="炭火焼きネギ塩牛タン丼" loading="lazy">
+            <p class="dish__name">炭火焼きネギ塩牛タン丼</p>
+            <p class="dish__price">900円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-bibimba.webp?v=20260925a" alt="宮崎牛ミンチのビビンバ丼" loading="lazy">
+            <p class="dish__name">宮崎牛ミンチのビビンバ丼</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-reimen.webp?v=20260925a" alt="牛輝冷麺" loading="lazy">
+            <p class="dish__name">牛輝冷麺</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-engawa.webp?v=20260925a" alt="おつまみ鶏えんがわ" loading="lazy">
+            <p class="dish__name">おつまみ鶏えんがわ</p>
+            <p class="dish__price">550円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-tandon.webp?v=20260925a" alt="炭火焼きネギ塩牛タン丼" loading="lazy">
+            <p class="dish__name">炭火焼きネギ塩牛タン丼</p>
+            <p class="dish__price">900円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-bibimba.webp?v=20260925a" alt="宮崎牛ミンチのビビンバ丼" loading="lazy">
+            <p class="dish__name">宮崎牛ミンチのビビンバ丼</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-reimen.webp?v=20260925a" alt="牛輝冷麺" loading="lazy">
+            <p class="dish__name">牛輝冷麺</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-engawa.webp?v=20260925a" alt="おつまみ鶏えんがわ" loading="lazy">
+            <p class="dish__name">おつまみ鶏えんがわ</p>
+            <p class="dish__price">550円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-tandon.webp?v=20260925a" alt="炭火焼きネギ塩牛タン丼" loading="lazy">
+            <p class="dish__name">炭火焼きネギ塩牛タン丼</p>
+            <p class="dish__price">900円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-bibimba.webp?v=20260925a" alt="宮崎牛ミンチのビビンバ丼" loading="lazy">
+            <p class="dish__name">宮崎牛ミンチのビビンバ丼</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-reimen.webp?v=20260925a" alt="牛輝冷麺" loading="lazy">
+            <p class="dish__name">牛輝冷麺</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-engawa.webp?v=20260925a" alt="おつまみ鶏えんがわ" loading="lazy">
+            <p class="dish__name">おつまみ鶏えんがわ</p>
+            <p class="dish__price">550円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-tandon.webp?v=20260925a" alt="炭火焼きネギ塩牛タン丼" loading="lazy">
+            <p class="dish__name">炭火焼きネギ塩牛タン丼</p>
+            <p class="dish__price">900円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-bibimba.webp?v=20260925a" alt="宮崎牛ミンチのビビンバ丼" loading="lazy">
+            <p class="dish__name">宮崎牛ミンチのビビンバ丼</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-reimen.webp?v=20260925a" alt="牛輝冷麺" loading="lazy">
+            <p class="dish__name">牛輝冷麺</p>
+            <p class="dish__price">850円</p>
+          </li>
+          <li aria-hidden="true" class="dish">
+            <img class="dish__img" src="assets/img/takeout-engawa.webp?v=20260925a" alt="おつまみ鶏えんがわ" loading="lazy">
+            <p class="dish__name">おつまみ鶏えんがわ</p>
+            <p class="dish__price">550円</p>
+          </li>
+        </ul>
       </div>
+    <div class="after-marquee">
+      <p class="more-wrap reveal"><a class="more-btn" href="takeout.html">テイクアウトの詳細はこちら<span class="more-btn__arrow" aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
@@ -195,32 +444,110 @@
             <span class="room-list__label">団体様まで対応</span>
           </li>
         </ul>
-        <a class="ghost-link ghost-link--dark reveal" href="room.html">個室の詳細はこちら<span class="ghost-link__arrow">→</span></a>
       </div>
     </div>
 
+    <div class="room-gallery">
+      <p class="room-gallery__label reveal">個室の様子</p>
+      <div class="room-gallery__grid">
+        <figure class="room-gallery__item reveal">
+          <img src="assets/img/room-a.webp?v=20261011a" alt="個室：板張りの壁と無煙ロースターのあるテーブル席" loading="lazy">
+        </figure>
+        <figure class="room-gallery__item reveal">
+          <img src="assets/img/room-b.webp?v=20261011a" alt="個室：ゆったりとした座敷の掘りごたつ席" loading="lazy">
+        </figure>
+        <figure class="room-gallery__item reveal">
+          <img src="assets/img/room-c.webp?v=20261011a" alt="個室：墨色の柄の壁に囲まれた座敷席" loading="lazy">
+        </figure>
+      </div>
+    </div>
   </section>
 
   <section class="band band--light" id="sns">
-    <div class="section-inner">
+    <div class="section-inner section-inner--before-marquee">
       <p class="eyebrow eyebrow--dark reveal">SNS</p>
       <h2 class="section__title section__title--dark reveal">Instagram</h2>
       <p class="section__lead reveal">最新情報や店内の様子はInstagramでも発信しています。</p>
-      <a class="ghost-link ghost-link--dark reveal" href="https://www.instagram.com/gyuki_yakiniku/" target="_blank" rel="noopener">@gyuki_yakiniku<span class="ghost-link__arrow">→</span></a>
 
-      <div class="celeb reveal">
-        <p class="celeb__label">著名人の方にもご来店いただいています</p>
-        <div class="celeb__grid">
-          <img src="assets/img/celeb-1.webp?v=20260925a" alt="ご来店いただいたお客様と店主" loading="lazy">
-          <img src="assets/img/celeb-2.webp?v=20260925a" alt="ご来店いただいたお客様と店主" loading="lazy">
-          <img src="assets/img/celeb-3.webp?v=20260925a" alt="ご来店いただいたお客様と店主" loading="lazy">
-          <img src="assets/img/celeb-4.webp?v=20260925a" alt="ご来店いただいたお客様と店主" loading="lazy">
-          <img src="assets/img/celeb-5.webp?v=20260925a" alt="ご来店いただいたお客様と店主" loading="lazy">
-          <img src="assets/img/celeb-6.webp?v=20260925a" alt="ご来店いただいたお客様と店主" loading="lazy">
-          <img src="assets/img/celeb-7.webp?v=20260925a" alt="ご来店いただいたお客様と店主" loading="lazy">
-          <img src="assets/img/celeb-8.webp?v=20260925a" alt="ご来店いただいたお客様と店主" loading="lazy">
+    </div>
+      <div class="insta-rows">
+        <div class="marquee marquee--right" style="--marquee-duration: 76s" role="region" aria-label="Instagramの投稿（自動で流れます）">
+          <ul class="marquee__track">
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/DN4DJwxk6cy/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-02.webp?v=20261112a" alt="Instagramの投稿：ランチの焼肉の値段を聞かれるので参考までに" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/DBw_XLeTsqx/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-05.webp?v=20261112a" alt="Instagramの投稿：いよいよ明日よりランチ営業始めます" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C3lyz8avUfV/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-09.webp?v=20261112a" alt="Instagramの投稿：炙りチーズ石焼ビビンバ" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C3Y-WBBvQ2_/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-11.webp?v=20261112a" alt="Instagramの投稿" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C3Byt1hPWMv/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-13.webp?v=20261112a" alt="Instagramの投稿：上塩タン" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C3BvqT-vEyZ/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-15.webp?v=20261112a" alt="Instagramの投稿：赤身肉の希少部位　ランプ" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C2_AruqS-ey/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-17.webp?v=20261112a" alt="Instagramの投稿：当店大人気の宮崎牛握りです️" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C2-_N2CSh4j/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-19.webp?v=20261112a" alt="Instagramの投稿：イチボ入荷しました" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/Cz7SyuEy7-3/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-21.webp?v=20261112a" alt="Instagramの投稿：ヒップホップアーティスト　Candeeさんにご来店いただきました" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/Cz7RW-mygxU/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-23.webp?v=20261112a" alt="Instagramの投稿：大人気レゲエアーティスト　CHEHONさんにご来店いただきました" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/CzpqDiKRpTl/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-25.webp?v=20261112a" alt="Instagramの投稿：大人気　和牛もつ鍋コース" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/Ch3ZYCXpo3I/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-27.webp?v=20261112a" alt="Instagramの投稿：７月１６日" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/Cg3HRnxJxnG/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-29.webp?v=20261112a" alt="Instagramの投稿：人気HIPHOPユニット" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/Cg2_xZpPFFR/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-31.webp?v=20261112a" alt="Instagramの投稿：夏だ‼️" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/CYIihHvP6q8/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-33.webp?v=20261112a" alt="Instagramの投稿：年末沢山のご来店誠にありがとうございました" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/CJdtltJjdT4/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-38.webp?v=20261112a" alt="Instagramの投稿：今年も皆様にはお世話になりました‍️‍️" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/CGoihgmje8J/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-40.webp?v=20261112a" alt="Instagramの投稿：大人気、2H飲み放題コース4000円（税別）です️" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/DN4DJwxk6cy/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-02.webp?v=20261112a" alt="Instagramの投稿：ランチの焼肉の値段を聞かれるので参考までに" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/DBw_XLeTsqx/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-05.webp?v=20261112a" alt="Instagramの投稿：いよいよ明日よりランチ営業始めます" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C3lyz8avUfV/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-09.webp?v=20261112a" alt="Instagramの投稿：炙りチーズ石焼ビビンバ" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C3Y-WBBvQ2_/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-11.webp?v=20261112a" alt="Instagramの投稿" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C3Byt1hPWMv/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-13.webp?v=20261112a" alt="Instagramの投稿：上塩タン" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C3BvqT-vEyZ/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-15.webp?v=20261112a" alt="Instagramの投稿：赤身肉の希少部位　ランプ" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C2_AruqS-ey/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-17.webp?v=20261112a" alt="Instagramの投稿：当店大人気の宮崎牛握りです️" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C2-_N2CSh4j/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-19.webp?v=20261112a" alt="Instagramの投稿：イチボ入荷しました" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/Cz7SyuEy7-3/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-21.webp?v=20261112a" alt="Instagramの投稿：ヒップホップアーティスト　Candeeさんにご来店いただきました" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/Cz7RW-mygxU/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-23.webp?v=20261112a" alt="Instagramの投稿：大人気レゲエアーティスト　CHEHONさんにご来店いただきました" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/CzpqDiKRpTl/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-25.webp?v=20261112a" alt="Instagramの投稿：大人気　和牛もつ鍋コース" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/Ch3ZYCXpo3I/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-27.webp?v=20261112a" alt="Instagramの投稿：７月１６日" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/Cg3HRnxJxnG/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-29.webp?v=20261112a" alt="Instagramの投稿：人気HIPHOPユニット" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/Cg2_xZpPFFR/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-31.webp?v=20261112a" alt="Instagramの投稿：夏だ‼️" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/CYIihHvP6q8/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-33.webp?v=20261112a" alt="Instagramの投稿：年末沢山のご来店誠にありがとうございました" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/CJdtltJjdT4/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-38.webp?v=20261112a" alt="Instagramの投稿：今年も皆様にはお世話になりました‍️‍️" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/CGoihgmje8J/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-40.webp?v=20261112a" alt="Instagramの投稿：大人気、2H飲み放題コース4000円（税別）です️" loading="lazy"></a></li>
+          </ul>
+        </div>
+          <div class="marquee" style="--marquee-duration: 72s" role="region" aria-label="Instagramの投稿（自動で流れます）">
+          <ul class="marquee__track">
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/DEPlFk-SnCk/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-03.webp?v=20261112a" alt="Instagramの投稿：今年も一年間沢山のお客様にご来店いただきありがとうございました" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/DBMCFbNyV4t/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-06.webp?v=20261112a" alt="Instagramの投稿：今年も、もつ鍋始まりました" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C3ZGPz-RcFv/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-10.webp?v=20261112a" alt="Instagramの投稿：おすすめの赤身肉　シンシン" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C3Bzhvjvfw0/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-12.webp?v=20261112a" alt="Instagramの投稿：馬トロ生ユッケ風" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C3Bx2JoPXFk/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-14.webp?v=20261112a" alt="Instagramの投稿：牛タン好きにはたまらない厚切りタンです" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C3BvJzLvgye/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-16.webp?v=20261112a" alt="Instagramの投稿：柔らかい肉の代表" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C2-_sEBycWs/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-18.webp?v=20261112a" alt="Instagramの投稿：赤身肉のカルパッチョ" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/C2--n3pSpoa/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-20.webp?v=20261112a" alt="Instagramの投稿：大人気アーティストCREAMさんにご来店頂きました" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/Cz7R0etSPN1/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-22.webp?v=20261112a" alt="Instagramの投稿：大人気レゲエアーティスト　APOLLOさんにご来店いただきました" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/Cz7Qlx9yBP9/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-24.webp?v=20261112a" alt="Instagramの投稿：レゲエアーティスト　775 ナナコさんに" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/CrlY_NsJlGM/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-26.webp?v=20261112a" alt="Instagramの投稿：G.W営業案内です️" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/ChBfijypzsm/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-28.webp?v=20261112a" alt="Instagramの投稿：当店大人気のイチボです️" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/Cg3FQfNJNh9/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-30.webp?v=20261112a" alt="Instagramの投稿：レゲエ界の今やレジェンド" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/CgnkzpaJ7gC/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-32.webp?v=20261112a" alt="Instagramの投稿：皆様、猛暑が続いておりますがいかがお過ごしでしょうか️" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/CNkA0wpjz4m/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-35.webp?v=20261112a" alt="Instagramの投稿：バランスの良い赤身肉ですね〜" loading="lazy"></a></li>
+            <li class="insta-tile"><a href="https://www.instagram.com/gyuki_yakiniku/p/CIMu4kHDhZz/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-39.webp?v=20261112a" alt="Instagramの投稿：もつ鍋コース¥3,500（税別）" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/DEPlFk-SnCk/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-03.webp?v=20261112a" alt="Instagramの投稿：今年も一年間沢山のお客様にご来店いただきありがとうございました" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/DBMCFbNyV4t/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-06.webp?v=20261112a" alt="Instagramの投稿：今年も、もつ鍋始まりました" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C3ZGPz-RcFv/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-10.webp?v=20261112a" alt="Instagramの投稿：おすすめの赤身肉　シンシン" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C3Bzhvjvfw0/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-12.webp?v=20261112a" alt="Instagramの投稿：馬トロ生ユッケ風" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C3Bx2JoPXFk/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-14.webp?v=20261112a" alt="Instagramの投稿：牛タン好きにはたまらない厚切りタンです" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C3BvJzLvgye/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-16.webp?v=20261112a" alt="Instagramの投稿：柔らかい肉の代表" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C2-_sEBycWs/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-18.webp?v=20261112a" alt="Instagramの投稿：赤身肉のカルパッチョ" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/C2--n3pSpoa/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-20.webp?v=20261112a" alt="Instagramの投稿：大人気アーティストCREAMさんにご来店頂きました" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/Cz7R0etSPN1/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-22.webp?v=20261112a" alt="Instagramの投稿：大人気レゲエアーティスト　APOLLOさんにご来店いただきました" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/Cz7Qlx9yBP9/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-24.webp?v=20261112a" alt="Instagramの投稿：レゲエアーティスト　775 ナナコさんに" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/CrlY_NsJlGM/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-26.webp?v=20261112a" alt="Instagramの投稿：G.W営業案内です️" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/ChBfijypzsm/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-28.webp?v=20261112a" alt="Instagramの投稿：当店大人気のイチボです️" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/Cg3FQfNJNh9/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-30.webp?v=20261112a" alt="Instagramの投稿：レゲエ界の今やレジェンド" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/CgnkzpaJ7gC/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-32.webp?v=20261112a" alt="Instagramの投稿：皆様、猛暑が続いておりますがいかがお過ごしでしょうか️" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/CNkA0wpjz4m/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-35.webp?v=20261112a" alt="Instagramの投稿：バランスの良い赤身肉ですね〜" loading="lazy"></a></li>
+            <li aria-hidden="true" class="insta-tile"><a tabindex="-1" href="https://www.instagram.com/gyuki_yakiniku/p/CIMu4kHDhZz/" target="_blank" rel="noopener"><img src="assets/img/insta/insta-39.webp?v=20261112a" alt="Instagramの投稿：もつ鍋コース¥3,500（税別）" loading="lazy"></a></li>
+          </ul>
         </div>
       </div>
+    <div class="after-marquee">
+      <p class="more-wrap reveal"><a class="more-btn" href="https://www.instagram.com/gyuki_yakiniku/" target="_blank" rel="noopener">Instagramを見る<span class="more-btn__arrow" aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
@@ -283,6 +610,6 @@
     <p class="footer__addr">宮崎県北諸県郡三股町稗田11-1</p>
   </div>
 </footer>
-<script src="script.js?v=20261112c"></script>
+<script src="script.js?v=20261112d"></script>
 </body>
 </html>

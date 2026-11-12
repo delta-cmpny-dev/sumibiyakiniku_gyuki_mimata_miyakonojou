@@ -1206,7 +1206,7 @@ a {
 }
 
 /* ==========================================================
-   2026-11-12 ページ分け：トップの一覧・注目の一品・別ページ
+   2026-11-12 ページ分け：トップの一覧・流れる写真・別ページ
    ========================================================== */
 
 /* 上に固定の帯があるので、ページ内の移動先が帯に隠れないようにする */
@@ -1220,7 +1220,7 @@ html {
   }
 }
 
-/* ---------- どんな時に使いますか（一覧） ---------- */
+/* ---------- 一覧（夜の焼肉・ランチ・テイクアウト・個室） ---------- */
 
 .band--sub {
   background: var(--bg-sub);
@@ -1230,9 +1230,14 @@ html {
   max-width: 1120px;
 }
 
+.section-inner--scene {
+  padding-top: clamp(40px, 7vw, 72px);
+  padding-bottom: clamp(40px, 7vw, 72px);
+}
+
 .scene-list {
   list-style: none;
-  margin: 36px 0 0;
+  margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1335,100 +1340,199 @@ html {
   overflow-wrap: anywhere;
 }
 
-/* ---------- トップの「注目の一品」 ---------- */
+/* ---------- 横に流れ続ける写真（メニュー・テイクアウト・Instagram） ---------- */
 
-.feature {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 28px;
+.marquee {
+  overflow: hidden;
   margin-top: 40px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation: marquee-left var(--marquee-duration, 60s) linear infinite;
+}
+
+.marquee--right .marquee__track {
+  animation-name: marquee-right;
+}
+
+.marquee:hover .marquee__track,
+.marquee:focus-within .marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+/* 動きを減らす設定の人には、流さずに指で横へ送れるようにする */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .marquee .marquee__track,
+  .marquee--right .marquee__track {
+    animation: none;
+  }
+
+  .marquee__track > [aria-hidden="true"] {
+    display: none;
+  }
+}
+
+/* 料理の1枚 */
+.dish {
+  flex: 0 0 auto;
+  width: clamp(168px, 44vw, 240px);
+  padding-right: clamp(14px, 3vw, 24px);
   text-align: left;
 }
 
-.feature__photo {
-  margin: 0;
-  width: 100%;
-  max-width: 340px;
-}
-
-.feature__photo img {
+.dish__img {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
 }
 
-.feature__body {
-  width: 100%;
-  max-width: 420px;
-}
-
-@media (min-width: 768px) {
-  .feature {
-    flex-direction: row;
-    justify-content: center;
-    gap: 56px;
-  }
-
-  .feature__photo {
-    flex: 0 0 340px;
-  }
-}
-
-.feature__tag {
-  margin: 0 0 6px;
-  font-family: var(--font-label);
-  font-weight: 700;
-  font-size: 0.78rem;
-  letter-spacing: 0.3em;
-  color: var(--accent);
-}
-
-.feature__name {
-  margin: 0 0 10px;
-  padding-top: 14px;
+.dish__name {
+  margin: 12px 0 2px;
+  padding-top: 10px;
   border-top: 2px solid var(--accent);
   font-family: var(--font-mincho);
   font-weight: 600;
-  font-size: clamp(1.3rem, 4.5vw, 1.6rem);
-  letter-spacing: 0.08em;
+  font-size: clamp(0.92rem, 3.6vw, 1.05rem);
+  letter-spacing: 0.05em;
   color: var(--ink);
+  line-height: 1.6;
 }
 
-.feature__desc {
+.dish__price {
   margin: 0;
-  font-size: clamp(0.9rem, 3vw, 1rem);
-}
-
-.feature__price {
-  margin: 10px 0 18px;
   font-family: var(--font-label);
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   color: var(--accent);
 }
 
-.feature--dark .feature__tag,
-.feature--dark .feature__price {
-  color: var(--gold);
-}
-
-.feature--dark .feature__name {
+.band--dark .dish__name {
   border-top-color: var(--gold);
   color: var(--text-on-dark);
 }
 
-.feature--dark .feature__desc {
-  color: var(--text-on-dark);
-  opacity: 0.85;
+.band--dark .dish__price {
+  color: var(--gold);
 }
 
-/* 個室：人数の下の「詳細はこちら」との間をあける */
-.band__split-text .room-list + .ghost-link {
-  margin-top: 28px;
+/* Instagramの投稿（2列。上は右へ、下は左へ流れる） */
+.insta-rows {
+  display: grid;
+  gap: 12px;
+  margin-top: 40px;
 }
 
-/* ---------- 別ページの上の見出し・戻るリンク ---------- */
+.insta-rows .marquee {
+  margin-top: 0;
+}
+
+.insta-tile {
+  flex: 0 0 auto;
+  padding-right: 12px;
+}
+
+.insta-tile a {
+  display: block;
+}
+
+.insta-tile img {
+  width: clamp(132px, 34vw, 200px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: opacity 0.25s ease;
+}
+
+.insta-tile a:hover img,
+.insta-tile a:focus-visible img {
+  opacity: 0.8;
+}
+
+/* ---------- 目立たせた「詳細はこちら」 ---------- */
+
+.more-wrap {
+  margin: 36px 0 0;
+  text-align: center;
+}
+
+.more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 58px;
+  padding: 0 14px 0 32px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: clamp(0.95rem, 3.6vw, 1.05rem);
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(140, 46, 30, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.more-btn__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--accent);
+  font-size: 1rem;
+  letter-spacing: 0;
+  transition: transform 0.2s ease;
+}
+
+.more-btn:hover,
+.more-btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(140, 46, 30, 0.36);
+}
+
+.more-btn:hover .more-btn__arrow {
+  transform: translateX(3px);
+}
+
+/* 暗い帯の上では金色のボタン */
+.band--dark .more-btn {
+  background: var(--gold);
+  color: var(--ink);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.band--dark .more-btn__arrow {
+  background: var(--ink);
+  color: var(--gold);
+}
+
+/* ---------- 別ページの上のロゴ・戻るリンク ---------- */
 
 .subhead {
   background: var(--ink);
@@ -1447,7 +1551,6 @@ html {
   margin: 0 auto;
 }
 
-
 .band--back .section-inner {
   padding-top: 32px;
   padding-bottom: 40px;
@@ -1456,11 +1559,6 @@ html {
 .top-bar__nav a[aria-current="page"] {
   opacity: 1;
   color: var(--gold);
-}
-
-/* 料金表は表示の時に28px上へ動くので、そのぶん見出しの上をあけて止める */
-.price-list__group[id] {
-  scroll-margin-top: 36px;
 }
 
 /* メニューのページ：料金表の各欄へ飛ぶボタン */
@@ -1492,4 +1590,26 @@ html {
 .jump-links a:focus-visible {
   background: var(--accent);
   color: var(--white);
+}
+
+/* 料金表は表示の時に28px上へ動くので、そのぶん見出しの上をあけて止める */
+.price-list__group[id] {
+  scroll-margin-top: 36px;
+}
+
+.marquee:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* 流れる写真の上下の箱 */
+.section-inner--before-marquee {
+  padding-bottom: 0;
+}
+
+.after-marquee {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 6vw, 48px) clamp(48px, 9vw, 96px);
+  text-align: center;
 }
