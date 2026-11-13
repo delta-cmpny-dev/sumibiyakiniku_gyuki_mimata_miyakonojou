@@ -1811,6 +1811,35 @@ html {
   opacity: 0.75;
 }
 
+/* ---------- iPhone（WebKit）で横にずれないように（2026-11-13） ---------- */
+/* WebKit は white-space: nowrap の中の <wbr> で折り返さず、はみ出してページが横に動いた。
+   組み立ての時に <wbr> の区切りごとを <span class="kw">（inline-block）に分け、まとまりの間だけで折り返す。 */
+.keep-words {
+  white-space: normal;
+}
+
+/* 区切りごとのまとまり。まとまりの間だけで折り返す（1つが行より長い時だけ中で折る） */
+.kw {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* 保険：中身がはみ出しても、ページ全体は横に動かさない（clip はスクロールの箱を作らないので、上の帯の固定は効いたまま） */
+.top-bar,
+main,
+footer {
+  overflow-x: clip;
+}
+
+/* 料金表の注記の中のまとまりに、金額用の書式（li span:last-child）が当たらないように */
+/* 金額の指定（.price-list__cat li span:last-child）と同じ強さにして、後に書いたこちらを効かせる */
+.price-list__cat li span.kw:last-child,
+.price-list__cat li span.kw {
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
 /* 流れる写真の上下の箱 */
 .section-inner--before-marquee {
   padding-bottom: 0;
