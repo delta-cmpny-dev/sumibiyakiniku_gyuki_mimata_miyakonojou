@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261113a">
+<link rel="stylesheet" href="style.css?v=20261113d">
 </head>
 <body>
 
@@ -47,7 +47,7 @@
       <nav class="jump-links reveal" aria-label="料金表へ移動">
         <a href="#dinner">料理の料金表<span aria-hidden="true">↓</span></a>
         <a href="#drink">ドリンク<span aria-hidden="true">↓</span></a>
-        <a href="#lunch">ランチ<span aria-hidden="true">↓</span></a>
+        <a href="#lunch">ランチ（休業中）<span aria-hidden="true">↓</span></a>
       </nav>
 
       <div class="menu-grid">
@@ -359,11 +359,12 @@
         </div>
 
         <h4 class="price-list__group price-list__group--split" id="lunch">
-          <span class="price-list__group-spacer" aria-hidden="true">（11:30〜14:30）</span>
+          <span class="price-list__group-spacer" aria-hidden="true">ただいま休業中</span>
           <span>ランチメニュー</span>
-          <span class="price-list__group-time">（11:30〜14:30）</span>
+          <span class="price-list__group-time price-list__group-time--paused">ただいま休業中</span>
         </h4>
-        <div class="price-list__grid price-list__grid--lunch">
+        <p class="price-list__notice keep-words">ランチ営業は、<wbr>ただいまお休みを<wbr>いただいております。<br>これまでのランチメニュー<wbr>（11:30〜14:30）を、<wbr>下に載せています。</p>
+        <div class="price-list__grid price-list__grid--lunch price-list__grid--paused">
           <div class="price-list__cat price-list__cat--wide">
             <ul>
               <li><span>選べる焼肉セット（平日）</span><span>1,980円</span></li>

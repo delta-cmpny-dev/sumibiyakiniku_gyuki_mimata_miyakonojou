@@ -1708,6 +1708,109 @@ html {
   color: var(--gold);
 }
 
+/* ---------- ランチ休業中の表示（消さずに「休業中」と分かるように） ---------- */
+.scene-card {
+  position: relative;
+}
+
+.scene-card__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 10px;
+  border: 1px solid var(--gold);
+  background: rgba(28, 28, 28, 0.85);
+  color: var(--gold);
+  font-family: var(--font-mincho);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+
+.scene-card--paused .scene-card__img {
+  filter: grayscale(0.55) brightness(0.88);
+}
+
+/* 文字の所（題・丼・ビビンバ・冷麺…）も、メニューのページのランチ欄と同じ灰色に。「ただいま休業中」だけ色を残す */
+.scene-card--paused {
+  background: #E6E0D8;
+  border-color: rgba(28, 28, 24, 0.18);
+}
+
+.scene-card--paused .scene-card__title {
+  color: #6F6860;
+}
+
+.scene-card--paused .scene-card__desc {
+  color: #8A837B;
+  opacity: 1;
+}
+
+.scene-card--paused .scene-card__arrow {
+  color: #9C948B;
+}
+
+.price-list__group-time--paused {
+  opacity: 1;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.price-list__notice {
+  max-width: 520px;
+  margin: -8px auto 24px;
+  padding: 14px 16px;
+  border-top: 1px solid rgba(140, 46, 30, 0.35);
+  border-bottom: 1px solid rgba(140, 46, 30, 0.35);
+  font-family: var(--font-mincho);
+  font-size: clamp(0.85rem, 3.4vw, 0.95rem);
+  line-height: 1.9;
+  text-align: center;
+  color: var(--ink);
+}
+
+/* ランチの料金表：一覧のランチのカードと同じく、暗く落ち着かせて「休業中」の札を付ける */
+.price-list__grid--paused .price-list__cat {
+  position: relative;
+  background: #E6E0D8;
+  border-color: rgba(28, 28, 24, 0.18);
+  box-shadow: none;
+  padding-top: 58px;
+}
+
+.price-list__grid--paused .price-list__cat::before {
+  content: "休業中";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 3px 10px;
+  border: 1px solid var(--gold);
+  background: rgba(28, 28, 28, 0.85);
+  color: var(--gold);
+  font-family: var(--font-mincho);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+
+.price-list__grid--paused .price-list__cat li span:first-child {
+  color: #8A837B;
+}
+
+.price-list__grid--paused .price-list__cat li span:last-child {
+  color: #9C948B;
+}
+
+.price-list__grid--paused .price-list__cat li + li {
+  border-top-color: rgba(28, 28, 24, 0.14);
+}
+
+.info-note {
+  display: inline-block;
+  font-size: 0.85em;
+  opacity: 0.75;
+}
+
 /* 流れる写真の上下の箱 */
 .section-inner--before-marquee {
   padding-bottom: 0;
