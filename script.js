@@ -54,9 +54,11 @@
     });
   }
 
+  var rootEl = document.documentElement;
   function restart() {
     clearInterval(timer);
-    if (reduce) return;
+    // 開く前の演出の間は数えない（終わってから3秒ごとに切り替える）
+    if (reduce || rootEl.classList.contains('has-intro')) return;
     timer = setInterval(function () { show((current + 1) % slides.length); }, INTERVAL);
   }
 
@@ -66,6 +68,13 @@
 
   show(0);
   restart();
+  // 演出が終わって幕が外れたら（押して飛ばした時・保険で外れた時も）、そこから数え始める
+  if (rootEl.classList.contains('has-intro') && 'MutationObserver' in window) {
+    var mo = new MutationObserver(function () {
+      if (!rootEl.classList.contains('has-intro')) { mo.disconnect(); restart(); }
+    });
+    mo.observe(rootEl, { attributes: true, attributeFilter: ['class'] });
+  }
 })();
 
 (function () {
