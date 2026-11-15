@@ -1,0 +1,27 @@
+/* 開く前の演出（2026-11-15 試作）。has-intro が付いている間だけ、画面の上に重ねる */
+.intro {
+  display: none;
+}
+
+.has-intro,
+.has-intro body {
+  overflow: hidden;
+}
+
+.has-intro .intro {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: radial-gradient(ellipse at 50% 55%, #221d19 0%, #141210 60%, #0e0c0b 100%);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.intro__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
